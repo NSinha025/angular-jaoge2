@@ -1,0 +1,19 @@
+<h2>Seat Layout</h2>
+<div>
+  <label>Number of Seats to Book (1-7):</label>
+  <input #seatCount type="number" min="1" max="7">
+  <button (click)="selectSeats(seatCount.value)">Book Seats</button>
+  <button (click)="logout()" style="margin-left: 20px;">Logout</button>
+</div>
+
+<div class="seat-layout">
+  <div *ngFor="let row of rows" class="row">
+    <span>Row {{ row.rowNumber }}: </span>
+    <span *ngFor="let seat of row.seats" 
+          class="seat" 
+          [class.booked]="bookedSeats.includes(seat)" 
+          [class.selected]="selectedSeats.includes(seat)">
+      {{ seat }}
+    </span>
+  </div>
+</div>

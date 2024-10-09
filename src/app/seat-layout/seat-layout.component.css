@@ -1,0 +1,28 @@
+.seat-layout {
+  margin-top: 20px;
+}
+
+.row {
+  margin: 5px 0;
+}
+
+.seat {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 2px;
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.booked {
+  background-color: red;
+  color: white;
+}
+
+.selected {
+  background-color: green;
+  color: white;
+}
